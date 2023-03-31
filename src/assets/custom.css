@@ -1,0 +1,14 @@
+.title{
+    color: rgb(167, 17, 17);
+}
+.preview-img.active{
+    display: block;
+}
+.preview-img {
+    display: none;
+    text-align: right;
+    margin-left: 771px;
+    height: 350px;
+    width: 300px;
+    cursor: pointer;
+}

@@ -1,33 +1,33 @@
 import React ,{useState, useEffect} from "react";
- const User =()=>{
-    // const url = "https://jsonplaceholder.typicode.com/users";
-    // const [data, setData] = useState([]);
-
-    const Url = "https://jsonplaceholder.typicode.com/users";
-  const [ data,setData]=useState([]);
-    const fetchInfo = () => {
-      return fetch(Url)
-        .then((res) => res.json())
-        .then((d) => setData(d))
-    }
-    useEffect(() => {
-      fetchInfo();
-    }, []);
+// Create function based user
+const User =()=>{
+const Url = "https://jsonplaceholder.typicode.com/users";
+// How to use useState hooks
+const [ data,setData]=useState([]);
+// Create arrow function
+const fetchData=()=>{
+     return fetch(Url)
+     .then((resp)=>resp.json())
+     .then((result)=>setData(result))
+}
+// How to use useEffect hooks
+useEffect(()=>{
+    fetchData();
+},[data]);
     return(
         <div className="App">
-        <h1 style={{ color: "green" }}>Get Api via React</h1>
+        <h1 style={{ color: "red" }}>Get Api via React</h1>
         <center>
-          {data.map((dataObj, index) => {
-            
+            { data.map((indexdata)=>{
             return (
            <div>
-            <p>{dataObj.id}</p>
-              <p><b>Name :-</b> {dataObj.name}</p> 
-
-              <p><b>Email Adress:-</b> {dataObj.email}</p>
-              <p><b>Phone Number:-</b> {[dataObj.phone]}</p>
-              <p><b>Company:- </b> {dataObj.company.name}</p>
-              <p><b>adress Adress:-</b> {dataObj.address.city} ,{dataObj.address.street}, {dataObj.address.zipcode}</p>
+            {/* display api data */}
+            <p className={ indexdata.id }>{indexdata.id}</p>
+              <p><b>Name :-</b>{ indexdata.name }</p> 
+              <p><b>Email Adress:-</b> { indexdata.email }</p>
+              <p><b>Phone Number:-</b> { indexdata.phone}</p>
+              <p><b>Company Name:- </b> { indexdata.company.name}</p>
+              <p><b>adress Adress:-</b> { indexdata.address.city} ,{ indexdata.address.street}, { indexdata.address.zipcode }</p>
               </div>
             );
           })}

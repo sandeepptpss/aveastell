@@ -13,12 +13,14 @@ setFile(URL.createObjectURL(e.target.files[0]));
 
 
 
+
 localStorage.setItem('src',URL.createObjectURL(e.target.files[0]));
 
 
 var data = localStorage.getItem("src")
 alert(data)
 }
+
 return(
     <div className="App">
         <h2>Display Preview Image  </h2>
