@@ -18,6 +18,7 @@ import React ,{useState, useEffect} from "react";
         <h1 style={{ color: "green" }}>Get Api via React</h1>
         <center>
           {data.map((dataObj, index) => {
+            
             return (
            <div>
             <p>{dataObj.id}</p>
