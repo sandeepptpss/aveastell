@@ -15,6 +15,7 @@ setFile(URL.createObjectURL(e.target.files[0]));
 localStorage.setItem('File',URL.createObjectURL(e.target.files[0]));
 }
 
+
 const remove = ()=>{
      setFile();
      ref.current.value = "";
