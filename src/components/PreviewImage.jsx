@@ -40,7 +40,7 @@ return(
 
 
   <TransformComponent className="zoom-image container">
-      <input className="my-file" type="file" ref={ref} onChange={handleChange} />
+  <input className="my-file" type="file" ref={ref} onChange={handleChange} />
 
   <img className="preview-img banner-img" src={image_path} alt="Previw-Img" />
 

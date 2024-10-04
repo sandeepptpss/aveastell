@@ -16,21 +16,26 @@ useEffect(()=>{
 },[data]);
     return(
         <div className="App">
-        <h1 style={{ color: "red" }}>Get Api via React</h1>
+        <h1 style={{ color: "green" }}>Get Api via React</h1>
         <center>
             { data.map((indexdata)=>{
             return (
            <div className="main-get-api">
             {/* display api data */}
-            <p className={ indexdata.id }>{indexdata.id}</p>
-                <p><b>Name :-</b>{ indexdata.name }</p> 
+              <h2 className={ indexdata.id }>{indexdata.id}</h2>
+               <p><b>Name :-</b>{ indexdata.name }</p> 
                <p><b>Email Adress:-</b> { indexdata.email }</p>
                <p><b>Phone Number:-</b> { indexdata.phone}</p>
                <p><b>Company Name:-</b> { indexdata.company.name}</p>
-               <p><b>adress Adress:-</b> { indexdata.address.city} ,{ indexdata.address.street}, { indexdata.address.zipcode }</p>
+               <p><b>Adress Adress:-</b> { indexdata.address.city} ,{ indexdata.address.street}, { indexdata.address.zipcode }</p>
+               <p><b>Website Name:-</b> { indexdata.website}</p>
+               <p><b>lat:</b> { indexdata.address.geo.lat }</p>
+               <p><b>lng:</b> { indexdata.address.geo.lng }</p>
+               
               </div>
             );
-          })}
+          })
+          }
         </center>
       </div>
     );
