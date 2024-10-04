@@ -1,14 +1,54 @@
 .title{
     color: rgb(167, 17, 17);
 }
-.preview-img.active{
+.preview-img {
+    text-align: right;
+    margin-left: -262px;
+    height: 350px;
+    margin-bottom: 55px;
+    width: 328px;
+    cursor: pointer;
+}
+
+img.banner-img {
+    width: 500px;
+    height: 500px;
+  }
+  .App.main-home-page {
+    margin-left: 675px;
+    text-align: center !important;
+  }
+  .tools.image-zoom-control {
+    position: absolute;
+    z-index: 99999;
+    padding-top: 13px;
+    margin-left: 390px;
+  }
+  button.remove-image {
+    margin-left: -284px;
+}
+input.my-file {
+  margin-top: 242px;
+  margin-left: 180px;
+}
+
+
+.main-control-image.active {
     display: block;
 }
-.preview-img {
+.main-control-image {
     display: none;
-    text-align: right;
-    margin-left: 771px;
-    height: 350px;
-    width: 300px;
-    cursor: pointer;
+}
+
+.main-nav  li  {
+  display: inline-block;
+  padding: 8px;
+}
+
+button.remove-image {
+  margin-left: -445px;
+}
+
+.main-preview-page {
+  margin-left: 508px;
 }

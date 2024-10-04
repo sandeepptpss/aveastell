@@ -10,7 +10,7 @@ const fetchData=()=>{
      .then((resp)=>resp.json())
      .then((result)=>setData(result))
 }
-// How to use useEffect hooks
+//How to use useEffect hooks
 useEffect(()=>{
     fetchData();
 },[data]);
@@ -20,14 +20,14 @@ useEffect(()=>{
         <center>
             { data.map((indexdata)=>{
             return (
-           <div>
+           <div className="main-get-api">
             {/* display api data */}
             <p className={ indexdata.id }>{indexdata.id}</p>
-              <p><b>Name :-</b>{ indexdata.name }</p> 
-              <p><b>Email Adress:-</b> { indexdata.email }</p>
-              <p><b>Phone Number:-</b> { indexdata.phone}</p>
-              <p><b>Company Name:- </b> { indexdata.company.name}</p>
-              <p><b>adress Adress:-</b> { indexdata.address.city} ,{ indexdata.address.street}, { indexdata.address.zipcode }</p>
+                <p><b>Name :-</b>{ indexdata.name }</p> 
+               <p><b>Email Adress:-</b> { indexdata.email }</p>
+               <p><b>Phone Number:-</b> { indexdata.phone}</p>
+               <p><b>Company Name:-</b> { indexdata.company.name}</p>
+               <p><b>adress Adress:-</b> { indexdata.address.city} ,{ indexdata.address.street}, { indexdata.address.zipcode }</p>
               </div>
             );
           })}
@@ -36,5 +36,3 @@ useEffect(()=>{
     );
  }
 export default User;
-
-
